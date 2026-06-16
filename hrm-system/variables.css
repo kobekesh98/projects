@@ -1,0 +1,78 @@
+/**
+ * HRM System — Design Tokens
+ * Central color palette, typography, spacing, and shadow definitions.
+ * Edit these values to re-theme the entire application.
+ */
+
+:root {
+  /* ?? Typography ?? */
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* ?? Core palette (dark enterprise) ?? */
+  --color-bg-primary: #0b0d12;
+  --color-bg-secondary: #12151c;
+  --color-bg-tertiary: #1a1e28;
+  --color-bg-elevated: #222733;
+  --color-bg-hover: #2a3040;
+
+  /* Accent — electric teal */
+  --color-accent: #2dd4bf;
+  --color-accent-hover: #5eead4;
+  --color-accent-muted: rgba(45, 212, 191, 0.12);
+  --color-accent-glow: rgba(45, 212, 191, 0.25);
+
+  /* Text */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #0b0d12;
+
+  /* Borders */
+  --color-border: #2a3040;
+  --color-border-light: #363d4d;
+
+  /* Semantic */
+  --color-success: #34d399;
+  --color-success-bg: rgba(52, 211, 153, 0.12);
+  --color-warning: #fbbf24;
+  --color-warning-bg: rgba(251, 191, 36, 0.12);
+  --color-danger: #f87171;
+  --color-danger-bg: rgba(248, 113, 113, 0.12);
+  --color-info: #60a5fa;
+  --color-info-bg: rgba(96, 165, 250, 0.12);
+
+  /* ?? Layout ?? */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --header-height: 64px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* ?? Spacing scale ?? */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* ?? Shadows ?? */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 24px var(--color-accent-glow);
+
+  /* ?? Transitions ?? */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ?? Z-index layers ?? */
+  --z-sidebar: 100;
+  --z-header: 90;
+  --z-modal: 200;
+  --z-toast: 300;
+}

@@ -1,0 +1,376 @@
+/**
+ * HRM System — Page-specific Styles
+ * Dashboard charts, calendar, org chart, and other module layouts.
+ */
+
+/* ?? Dashboard ?? */
+.dashboard-welcome {
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-welcome h1 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-xs);
+}
+
+.dashboard-welcome p {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.chart-placeholder {
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: var(--space-md) 0;
+}
+
+.chart-bar {
+  flex: 1;
+  background: linear-gradient(180deg, var(--color-accent), rgba(45, 212, 191, 0.2));
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  min-height: 20px;
+  transition: height var(--transition-slow);
+  position: relative;
+}
+
+.chart-bar:hover {
+  filter: brightness(1.15);
+}
+
+.chart-bar__label {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.activity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activity-item__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.activity-item__text {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.activity-item__time {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+/* ?? Attendance calendar grid ?? */
+.attendance-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.attendance-day {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: default;
+}
+
+.attendance-day--header {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.attendance-day--present { background: var(--color-success-bg); color: var(--color-success); }
+.attendance-day--absent  { background: var(--color-danger-bg);  color: var(--color-danger); }
+.attendance-day--leave   { background: var(--color-warning-bg); color: var(--color-warning); }
+.attendance-day--weekend  { background: var(--color-bg-tertiary); color: var(--color-text-muted); }
+.attendance-day--future   { color: var(--color-text-muted); }
+
+/* ?? Org chart ?? */
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+}
+
+.org-node {
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  min-width: 160px;
+}
+
+.org-node__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.org-node__title {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.org-level {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.org-level::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  width: 1px;
+  height: 24px;
+  background: var(--color-border-light);
+}
+
+/* ?? Payroll summary ?? */
+.payroll-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.payroll-summary__item {
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.payroll-summary__label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.payroll-summary__amount {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ?? Training course cards ?? */
+.course-card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.course-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.course-card__banner {
+  height: 120px;
+  background: linear-gradient(135deg, var(--color-bg-elevated), var(--color-bg-tertiary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.course-card__body {
+  padding: var(--space-md);
+}
+
+.course-card__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-xs);
+}
+
+.course-card__meta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* ?? Benefits grid ?? */
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.benefit-item__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-muted);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-item__title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 2px;
+}
+
+.benefit-item__desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* ?? Settings layout ?? */
+.settings-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-xl);
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.settings-nav__link {
+  padding: 10px var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.settings-nav__link:hover,
+.settings-nav__link.active {
+  background: var(--color-accent-muted);
+  color: var(--color-accent);
+}
+
+/* ?? Reports ?? */
+.report-metric {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.report-metric__value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.report-metric__label {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+/* ?? Recruitment pipeline ?? */
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.pipeline__column {
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  min-height: 300px;
+}
+
+.pipeline__header {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+}
+
+.pipeline__card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.pipeline__card:hover {
+  border-color: var(--color-accent);
+}
+
+.pipeline__card-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.pipeline__card-role {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .pipeline { grid-template-columns: repeat(2, 1fr); }
+  .payroll-summary { grid-template-columns: 1fr; }
+  .settings-layout { grid-template-columns: 1fr; }
+}
