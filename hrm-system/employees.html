@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employees — Nexora HRM</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="employees">
+
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <div class="main-content">
+      <header class="page-header">
+        <div class="page-header__left">
+          <button id="menu-toggle" class="btn btn--ghost btn--icon" aria-label="Toggle menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+          <div>
+            <h1 class="page-header__title">Employees</h1>
+            <div class="page-header__breadcrumb">People / Employee Directory</div>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-body">
+        <!-- Toolbar: search + add button -->
+        <div class="toolbar">
+          <div class="toolbar__left">
+            <div class="search-input">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              <input id="employee-search" class="form-control" type="search" placeholder="Search employees…">
+            </div>
+          </div>
+          <div class="toolbar__right">
+            <button id="add-employee-btn" class="btn btn--primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              Add Employee
+            </button>
+          </div>
+        </div>
+
+        <!-- Employee data table -->
+        <div id="employee-table"></div>
+        <div id="employee-pagination"></div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/table.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/pages/employees.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

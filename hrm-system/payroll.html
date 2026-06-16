@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll — Nexora HRM</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="payroll">
+
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <div class="main-content">
+      <header class="page-header">
+        <div class="page-header__left">
+          <button id="menu-toggle" class="btn btn--ghost btn--icon" aria-label="Toggle menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+          <div>
+            <h1 class="page-header__title">Payroll</h1>
+            <div class="page-header__breadcrumb">Operations / Payroll Processing</div>
+          </div>
+        </div>
+        <div class="page-header__right">
+          <button class="btn btn--secondary">Export Report</button>
+          <button class="btn btn--primary">Run Payroll</button>
+        </div>
+      </header>
+
+      <main class="page-body">
+        <!-- Payroll summary totals -->
+        <div id="payroll-summary"></div>
+
+        <!-- Payroll records table -->
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">May 2026 Payroll</span>
+            <span class="badge badge--success">5 records</span>
+          </div>
+          <div class="card__body" style="padding:0">
+            <div id="payroll-table"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/table.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/pages/payroll.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
