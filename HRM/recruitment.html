@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruitment — Nexora HRM</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="recruitment">
+
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <div class="main-content">
+      <header class="page-header">
+        <div class="page-header__left">
+          <button id="menu-toggle" class="btn btn--ghost btn--icon" aria-label="Toggle menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+          <div>
+            <h1 class="page-header__title">Recruitment</h1>
+            <div class="page-header__breadcrumb">People / Recruitment</div>
+          </div>
+        </div>
+        <div class="page-header__right">
+          <button id="add-job-btn" class="btn btn--primary">Post New Job</button>
+        </div>
+      </header>
+
+      <main class="page-body">
+        <!-- Job postings table -->
+        <div class="card" style="margin-bottom:var(--space-xl)">
+          <div class="card__header"><span class="card__title">Open Positions</span></div>
+          <div class="card__body" style="padding:0">
+            <div id="jobs-table"></div>
+          </div>
+        </div>
+
+        <!-- Candidate pipeline kanban -->
+        <h2 style="margin-bottom:var(--space-md)">Candidate Pipeline</h2>
+        <div id="pipeline-board"></div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/table.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/pages/recruitment.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
